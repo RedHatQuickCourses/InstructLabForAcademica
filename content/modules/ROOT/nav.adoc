@@ -1,2 +1,2 @@
-* xref:ilabonrhel.adoc[1. InstructLab on RHEL Workshop]
-* xref:instructlabui.adoc[2. InstructLab UI Workshop]
+* xref:module-02.adoc[1. InstructLab on RHEL Workshop]
+* xref:module-03.adoc[2. InstructLab UI Workshop]
