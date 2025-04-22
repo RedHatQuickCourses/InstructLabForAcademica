@@ -1,5 +1,5 @@
 name: modules
-title: Default Title
+title: InstructLab for Academia
 version: master
 nav:
   - modules/ROOT/nav.adoc
