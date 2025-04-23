@@ -384,15 +384,34 @@ image::attribution-details.png[Attribution details, 80%, 80%]
 +
 image::download.png[Download, 80%, 80%]
 
+. Create a repository in Github so we can upload our qna.yaml and attribution.txt files. Go to Github (make sure you're logged in) and click the *New* button to create a new repository.
++
+image::new-github-repo.png[New Github repo, 80%, 80%]
+
+. Give the repository a name of *InstructLab_Workshop*, make sure *Public* is selected, and select *Add a README file*. Scroll down and click *Create Repository*
++
+image::github-initialize-repo.png[Initialize Github repo, 80%, 80%]
+
+. Click on the *Add file* dropdown and click *Upload files*
++
+image::github-repo-upload.png[Upload files, 80%, 80%]
+
+. Upload the *qna.yaml* file and *attribute.txt* file you downloaded and click *Commit changes*.
++
+image::github-add-files.png[Add files, 80%, 80%]
+
 === Step 5. Train the model locally with the new knowledge
 
 In this step, you will use InstructLab to train the model locally with the new knowledge. Check out this tutorial, https://developer.ibm.com/tutorials/awb-contributing-knowledge-instructlab-granite?utm_source=ibm_developer&utm_content=in_content_link&utm_id=tutorials_awb-contributing-llm-granite-instructlab-ui[Contributing knowledge to the open source Granite model using InstructLab^], for more details on how to set up your local environment and run the entire process locally. This step assumes that you have already completed this other tutorial and have your local environment set up.
 
-. Navigate to InstructLab directory and clone the taxonomy
+. In the bottom terminal window navigate to InstructLab directory and clone your repository. To get your repository URL click on *Code* and then the copy button under *HTTPS*.
++
+image::github-clone-url.png[Clone URL, 80%, 80%]
 +
 [source,sh,role=execute]
 ----
-git clone https://github.com/instructlab/taxonomy
+cd ~
+git clone https://github.com/<YOUR_REPO>
 ----
 
 . Create a new folder inside taxonomy to add the new knowledge.
@@ -403,6 +422,11 @@ mkdir -p taxonomy/knowledge/technology/large_language_model/granite
 ----
 
 . Move the downloaded qna.yaml and attribution.txt files inside the newly created folder.
++
+[source,sh,role=execute]
+----
+mv InstructLab_Workshop/attribution.txt InstructLab_Workshop/qna.yaml taxonomy/knowledge/technology/large_language_model/granite
+----
 
 . Verify that InstructLab detects the new taxonomy change you created and has a valid syntax. You should not worry about syntax errors here since InstructLab UI ensured that the generated taxonomy is valid.
 +
