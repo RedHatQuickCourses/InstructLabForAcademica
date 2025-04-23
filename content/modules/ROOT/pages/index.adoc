@@ -1,4 +1,4 @@
 = {lab_name}
 
-image::instructlab-banner.png[InstructLab banner,100%,100%]
+image::university-instruct-page.png[University InstructLab,100%,100%]
 
